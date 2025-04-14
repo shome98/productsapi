@@ -10,8 +10,8 @@ export interface IProduct extends Document {
   price: number;
   quantityInStock: number;
   images: {
-    fileId: string; // ImageKit file ID
-    url: string;    // Public URL of the image
+    fileId: string; 
+    url: string;  
   }[];
   supplier?: string;
   userId: string | Schema.Types.ObjectId;
