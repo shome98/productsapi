@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { connectToDatabase } from "./db/connect.db";
 import productCategoryRoutes from "./routes/category.routes";
+import productRoutes from "./routes/product.routes";
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/api/v1/products/categories", productCategoryRoutes);
+app.use("/api/v1/products/products", productRoutes);
 
 connectToDatabase()
     .then(() => console.log("✅ Connected to database"))
